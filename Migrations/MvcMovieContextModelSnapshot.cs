@@ -26,7 +26,10 @@ namespace MvcMovie.Migrations
 
                     b.Property<string>("Genre");
 
-                    b.Property<decimal>("Price");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<string>("Rating");
 
                     b.Property<DateTime>("ReleaseDate");
 
@@ -42,6 +45,7 @@ namespace MvcMovie.Migrations
                             Id = 1,
                             Genre = "Romantic Comedy",
                             Price = 7.99m,
+                            Rating = "R",
                             ReleaseDate = new DateTime(1989, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "When Harry Met Sally"
                         },
@@ -50,6 +54,7 @@ namespace MvcMovie.Migrations
                             Id = 2,
                             Genre = "Comedy",
                             Price = 8.99m,
+                            Rating = "R",
                             ReleaseDate = new DateTime(1984, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "Ghostbusters "
                         },
@@ -58,6 +63,7 @@ namespace MvcMovie.Migrations
                             Id = 3,
                             Genre = "Comedy",
                             Price = 9.99m,
+                            Rating = "R",
                             ReleaseDate = new DateTime(1986, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "Ghostbusters 2"
                         },
@@ -66,6 +72,7 @@ namespace MvcMovie.Migrations
                             Id = 4,
                             Genre = "Western",
                             Price = 3.99m,
+                            Rating = "R",
                             ReleaseDate = new DateTime(1959, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "Rio Bravo"
                         });
